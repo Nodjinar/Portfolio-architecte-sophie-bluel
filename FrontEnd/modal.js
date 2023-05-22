@@ -27,5 +27,14 @@ asidefigure.appendChild(nomElement);
      genenertravaux(travaux);
     
       
-
-
+     const modale = document.querySelector('#btn-1');
+     boutonModale.addEventListener('click',function(){
+         const modal =travaux.filter(function(modale){
+             return tous.categoryId===1;
+         });
+         console.log(modal);
+         document.querySelector('.photo').innerHTML="";
+         genenertravaux(modal);
+     });
+     
+     
