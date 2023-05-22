@@ -8,11 +8,11 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
+	<script src="https://use.fontawesome.com/805b5cfcaa.js"></script>
 	<link rel="stylesheet" href="./assets/style.css">
-	<script type="module" defer src="/index.js"></script>
+	<script type="module" src="/indexban.js"></script>
 </head>
 <body>
-	<div class="ban" style="display: none;">
 	<div class="head">
 		
 		<p>
@@ -21,14 +21,13 @@
 		<div class="tet2">Publier les chargements</div>
 		</p>	
 	</div>
-</div>
 <header>
 	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
 	<nav>
 		<ul>
 			<li>projets</li>
 			<li>contact</li>
-			 <a href="./login.html" id="login"> login</a>
+			<li> <a href="./login.html"> login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -37,6 +36,10 @@
 	<section id="introduction">
 		<figure>
 			<img src="./assets/images/sophie-bluel.png" alt="">
+            <div class="mode">
+				<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+				<p>modifier</p>
+			</div>
 		</figure>
 		<article>
 			<h2>Designer d'espace</h2>
@@ -47,15 +50,23 @@
 	</section>
 	<section id="portfolio">
 		<h2>Mes Projets</h2>
-	    <div class="box">
+		<div class="mode1">
+		<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+		<p><a href="modal.html">modifier</a></p>
+		</div>
+	    <!--<div class="box">
 		<button id="btn-1">Tous</button>
 		<button id="btn-2">Objets</button>
 		<button id="btn-3">Appartements</button>
         <button id="btn-4">Hotels Et Restaurants</button>
-		<!-- <button id="btn-4 ">effacer</button> -->
-       </div>
+		<button id="btn-4 ">effacer</button>
+       </div>-->
+	   <div>
+		<a href="modal">Ouvrir la boite modale</a>
+	   </div>
+	   <div class="fa"></div>
 		<div class="gallery">
-			<!-- <figure>
+			 <figure>
 				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
 				<figcaption>Abajour Tahina</figcaption>
 			</figure>
@@ -99,7 +110,7 @@
 				<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
 				<figcaption>Hotel First Arte - New Delhi</figcaption>
 			</figure>
-		</div> -->
+		</div> 
 	</section>
 	<section id="contact">
 		<h2>Contact</h2>
@@ -127,3 +138,5 @@
 
 </body>
 </html>
+
+
