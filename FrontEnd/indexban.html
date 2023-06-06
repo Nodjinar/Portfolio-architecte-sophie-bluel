@@ -10,11 +10,64 @@
 	<meta name="description" content="">
 	<script src="https://use.fontawesome.com/805b5cfcaa.js"></script>
 	<link rel="stylesheet" href="./assets/style.css">
-	<script type="module" src="/indexban.js"></script>
+	<link rel="stylesheet" href="./css/all.min.css">
+	<script type="module" src="./indexban.js"></script>
 </head>
 <body>
+	<aside id="modal1" class="modal" role="dialog" aria-labelledby="titlemodal" style="display: none;">
+		<div id="premiermodal" class="modal-wrapper js-modal-stop">
+			<!-- <button class="js-modal-close">Fermer la boite modale</button> -->
+			<div class="photo">
+				<button class="close-modal modal-trigger">X</button>
+				<h2>Galerie photos</h2>
+				<div class="box1">
+				</div>
+			</div>
+			<hr id="rose">
+			<input type="submit1" id="btnajout" value="Ajouter une Photo">
+			<p class="sup">Supprimer la Galerie</p>
+		</div>
+	
+		<div id="madal1"  aria-hidden="true" role="dialog" aria-labelledby="titlemodal" >
+			<div class="modal-wrapper modal2 js-modal-stop" style="display: none;">
+				<div class="photo">
+					<button class="close-modal modal-trigger">X</button>
+					<h2>Ajout Photo</h2>
+					<form method="post" action="" id="formenvoi">
+						<div class="boite">
+							<i class="fa fa-picture-o" aria-hidden="true"></i>
+							<img id="imagechoisi" style="display: none;" src="./assets/images/abajour-tahina.png" alt="">
+							<div class="put">
+								<label for="inputfile">+Ajouter une Photo</label>
+								<input type="file" name="inputfile" id="inputfile" style="display: none;">
+							</div>
+							<p class="jpg">jpg, png : 4mo max</p>
+					
+						</div>
+						</div>
+						<p>Titre</p>
+						<input type="text" class="input1" placeholder=""> <br>
+						<label for="categorie">Categorie</label>
+						<select name="categorie" id="categorie" class="input2">
+							<option value=""></option>
+							<option value="1">Objet</option>
+							<option value="2">Appartements</option>
+							<option value="3">Hotels et Restaurant</option>
+						</select>
+						<input type="submit" class="input4" value="Valider">
+					</form>
+	
+	
+			</div>
+		</div>
+		</div>
+	
+	</aside>
+
+	 
+
+	
 	<div class="head">
-		
 		<p>
 		<div class="fa"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
 		<div class="tet1">Mode édition</div>
@@ -36,7 +89,7 @@
 	<section id="introduction">
 		<figure>
 			<img src="./assets/images/sophie-bluel.png" alt="">
-            <div class="mode">
+            <div >
 				<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 				<p>modifier</p>
 			</div>
@@ -49,10 +102,12 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<div class="mode1">
-		<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-		<p><a href="modal.html">modifier</a></p>
+		<div class="headprojets">
+			<h2>Mes Projets</h2>
+			<div class="btnmodal">
+				<i class="fa fa-pencil-square-o"></i>
+				<p><a href="#modal">modifier</a></p>
+			</div>
 		</div>
 	    <!--<div class="box">
 		<button id="btn-1">Tous</button>
@@ -61,12 +116,12 @@
         <button id="btn-4">Hotels Et Restaurants</button>
 		<button id="btn-4 ">effacer</button>
        </div>-->
-	   <div>
+	   <!-- <div>
 		<a href="modal">Ouvrir la boite modale</a>
 	   </div>
-	   <div class="fa"></div>
+	   <div class="fa"></div> -->
 		<div class="gallery">
-			 <figure>
+			 <!-- <figure>
 				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
 				<figcaption>Abajour Tahina</figcaption>
 			</figure>
@@ -109,7 +164,7 @@
 			<figure>
 				<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
 				<figcaption>Hotel First Arte - New Delhi</figcaption>
-			</figure>
+			</figure> -->
 		</div> 
 	</section>
 	<section id="contact">

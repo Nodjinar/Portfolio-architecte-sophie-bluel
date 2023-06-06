@@ -1,4 +1,4 @@
-const Url ="http://localhost:5678/api/user/login/";
+const Url ="http://localhost:5678/api/users/login/";
 const flog = document.querySelector("#flog");
 flog.addEventListener('submit' , function(e) { 
   e.preventDefault();
@@ -23,21 +23,21 @@ flog.addEventListener('submit' , function(e) {
       method: "POST",
       headers: {"Content-Type":"application/json"},
       body: payload
-  }).then((res) => res.json())
-  .then((donnee)=>window.localStorage.setItem("token",donnee.token))
+  }).then((res) => {
+      if (JSON.stringify(user) === JSON.stringify(userIdentifier)) {
+          window.location = "./indexban.html"
 
-
-  if (JSON.stringify(user) === JSON.stringify(userIdentifier)) { 
-      window.location = "./index.html"
-
-       } else if (emailOfuser !== firstIdentifier){ 
+      } else if (emailOfuser !== firstIdentifier) {
           document.querySelector("#message").classList.add('warning')
 
-       } else if (passwordOfUser !== lastIdentifier) { 
+      } else if (passwordOfUser !== lastIdentifier) {
           document.querySelector("#message2").classList.add('warning')
-       } else { 
+      } else {
           document.querySelector('#flog').innerHTML = "Accés Refusé"
-       }
+      }
+      return res.json()
+  })
+  .then((donnee)=>window.localStorage.setItem("token",donnee.token))
         
   } );
 
